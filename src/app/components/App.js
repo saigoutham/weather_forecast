@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import SearchBar from '../containers/search_bar';
+import TableList from '../containers/table_list';
+
 class App extends Component {
   render() {
     return (
       <div>
-        This is a starter package configured with react redux bootstrap4 and
-        added custom style sheet too :}
+        <SearchBar />
+        <TableList />
       </div>
     );
   }

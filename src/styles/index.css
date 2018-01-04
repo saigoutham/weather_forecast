@@ -1,6 +1,11 @@
-body
+.input-group
 {
-    background-color: #222;
-    color: antiquewhite;
-    font-size: 50px;
+    margin:20px 0px;
+
+}
+
+th,td{
+    vertical-align: middle !important;
+    text-align: center;
+    align-items: center !important;
 }
