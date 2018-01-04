@@ -1,12 +1,15 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-class Index extends Component{
-    render()
-    {
-        return(
-            <div>This is a starter package configured with react redux bootstrap4 and added custom style sheet too :}</div>
-        );
-    }
-}
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
 
-ReactDOM.render(<Index />,document.querySelector('.container'));
+import App from './components/App';
+import reducers from './reducers';
+
+const createStoreWithMiddleware = applyMiddleware()(createStore);
+
+ReactDOM.render(
+<Provider store = {createStoreWithMiddleware(reducers)}>
+    <App />
+</Provider>
+,document.querySelector('.container'));
